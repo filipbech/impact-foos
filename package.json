@@ -1,0 +1,19 @@
+{
+  "name": "impact-foos",
+  "version": "0.0.1",
+  "description": "This is a WIP ranking system for the IMPACT foosball tournament.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipbech/impact-foos.git"
+  },
+  "author": "Filip Bech-Larsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filipbech/impact-foos/issues"
+  },
+  "homepage": "https://github.com/filipbech/impact-foos#readme",
+  "dependencies": {
+    "lit-html": "^0.7.1",
+    "lit-html-element": "^0.6.10"
+  }
+}
