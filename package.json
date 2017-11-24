@@ -2,6 +2,9 @@
   "name": "impact-foos",
   "version": "0.0.1",
   "description": "This is a WIP ranking system for the IMPACT foosball tournament.",
+  "scripts": {
+    "serve": "ws"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/filipbech/impact-foos.git"
@@ -15,5 +18,8 @@
   "dependencies": {
     "lit-html": "^0.7.1",
     "lit-html-element": "^0.6.10"
+  },
+  "devDependencies": {
+    "local-web-server": "^2.3.0"
   }
 }
