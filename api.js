@@ -20,8 +20,10 @@ export const getTournamentUserRanks = tournamentId => {
 
 export const createMatch = (tournamentId = '', match = {}) => {
     match.TournamentId = tournamentId;
+
     return fetch(`http://foosrank.azurewebsites.net/api/match/creatematch`, {
-        method: 'POST',
-        body: match
-    }).then(res => res.json());
+        method: 'post',
+        body: JSON.stringify(match),
+        headers: { 'Content-Type': 'application/json' }
+    }).then(res=>res.json());
 }
