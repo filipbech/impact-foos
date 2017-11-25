@@ -2,6 +2,7 @@ import { LitElement } from './node_modules/lit-html-element/lit-element.js';
 import { html } from './node_modules/lit-html/lib/lit-extended.js';
 
 import { TournamentList }  from './tournament-list.js';
+import { TournamentStatistics } from './tournament-statistics.js';
 
 import { AddMatch } from './add-match.js';
 
@@ -22,6 +23,7 @@ export class ImpactFoos extends LitElement {
             <tournament-list on-settournament="${this.setTournament}"></tournament-list>
             <h1>IMPACT-foos</h1>
             <add-match tournament=${this.tournament}></add-match>
+            <tournament-statistics tournamentid=${this.tournament}></tournament-statistics>
         `;
     }
 }
