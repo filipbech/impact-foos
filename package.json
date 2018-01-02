@@ -4,7 +4,7 @@
   "description": "This is a WIP ranking system for the IMPACT foosball tournament.",
   "scripts": {
     "serve": "copyfiles ./node_modules/lit-html-element/lit-element.js ./node_modules/lit-html/lib/lit-extended.js ./node_modules/lit-html/lit-html.js --up -u 1 ./ && ws --spa index.html",
-    "deploy": "copyfiles *.js index.html public && copyfiles ./node_modules/lit-html-element/lit-element.js ./node_modules/lit-html/lib/lit-extended.js ./node_modules/lit-html/lit-html.js -u 1 public & firebase deploy"
+    "deploy": "copyfiles *.js *.css index.html public && copyfiles ./node_modules/lit-html-element/lit-element.js ./node_modules/lit-html/lib/lit-extended.js ./node_modules/lit-html/lit-html.js -u 1 public & copyfiles assets/* public & firebase deploy"
   },
   "repository": {
     "type": "git",
