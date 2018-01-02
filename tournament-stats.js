@@ -1,4 +1,4 @@
-import { LitElement, html } from './node_modules/lit-html-element/lit-element.js';
+import { LitElement, html } from './lit-html-element/lit-element.js';
 import { routeTo } from './element-router.js';
 
 import { TOURNAMENT } from './state.js';

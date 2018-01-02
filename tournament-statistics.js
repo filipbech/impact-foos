@@ -1,5 +1,4 @@
-import { LitElement } from './node_modules/lit-html-element/lit-element.js';
-import { html } from './node_modules/lit-html/lib/lit-extended.js';
+import { LitElement, html } from './lit-html-element/lit-element.js';
 
 import { getTournament, getTournamentUserRanks } from './api.js';
 import { routeTo } from './element-router.js';

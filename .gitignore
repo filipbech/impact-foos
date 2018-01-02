@@ -1,2 +1,4 @@
 node_modules/*
 public/*
+lit-html/*
+lit-html-element/*
