@@ -6,8 +6,15 @@ export const getTournament = id => {
     return fetch(`http://foosrank.azurewebsites.net/api/tournament/GetTournament?id=${id}`).then(res => res.json());
 }
 
+let usersRequest;
+
 export const getAllUsers = () => {
-    return fetch(`http://foosrank.azurewebsites.net/api/User/GetAllUsers`).then(res => res.json());
+    if (usersRequest) {
+        return usersRequest;
+    } 
+    // add caching here...
+    usersRequest = fetch(`http://foosrank.azurewebsites.net/api/User/GetAllUsers`).then(res => res.json());
+    return usersRequest;
 }
 
 export const getUserStatistics = (username, tournamentId) => {

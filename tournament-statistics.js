@@ -2,6 +2,7 @@ import { LitElement } from './node_modules/lit-html-element/lit-element.js';
 import { html } from './node_modules/lit-html/lib/lit-extended.js';
 
 import { getTournament, getTournamentUserRanks } from './api.js';
+import { routeTo } from './element-router.js';
 
 export class TournamentStatistics extends LitElement {
 
@@ -21,10 +22,6 @@ export class TournamentStatistics extends LitElement {
         this._tournamentid = tournamentid;
         this.invalidate();
 
-        getTournament(tournamentid).then(tournament=>{
-            this.tournament = tournament;
-            this.invalidate();
-        });
         getTournamentUserRanks(tournamentid).then(tournament => {
             this.normalizeRanks(tournament.userRanks);
             this.invalidate();
@@ -36,7 +33,7 @@ export class TournamentStatistics extends LitElement {
 
     render() {
         return html`
-            <h1>Statistics for ${this.tournament && this.tournament.name}</h1>
+            <h3>Statistics</h3>
             ${this.ranking && 
                 html`<ul>
                 ${this.ranking.map(user=>html`
@@ -44,6 +41,7 @@ export class TournamentStatistics extends LitElement {
                 `)}
                 </ul>`
             }
+            <button on-click="${e=>{ routeTo('/stats') }}">More statistics...</button>
         `;
     }
 }

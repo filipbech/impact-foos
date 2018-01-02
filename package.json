@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "This is a WIP ranking system for the IMPACT foosball tournament.",
   "scripts": {
-    "serve": "ws"
+    "serve": "ws --spa index.html"
   },
   "repository": {
     "type": "git",
